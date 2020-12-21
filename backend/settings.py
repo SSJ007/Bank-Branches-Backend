@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-
+import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,6 +26,7 @@ SECRET_KEY = 'uvm@y+88#8+9%r8a$6&ubff-w6dcrr%r#b@7j(1ep$vpte+0c&'
 DEBUG = False
 
 ALLOWED_HOSTS = ['sanskar-fyle-coding-challenge.herokuapp.com', '127.0.0.1']
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -103,6 +104,9 @@ DATABASES = {
     # }
 }
 
+DATABASES['default'] = dj_database_url.config(default='postgresql://ualcvrjikfqe0s1gt5il:orHtjHjHgSZGLlv3N6Vq@bnz1jpuxidnwbn3vnd0f-postgresql.services.clever-cloud.com:5432/bnz1jpuxidnwbn3vnd0f')
+
+
 REST_FRAMEWORK = {
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     # 'PAGE_SIZE': 100,
@@ -148,4 +152,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join.(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join.(BASE_DIR, 'static')
