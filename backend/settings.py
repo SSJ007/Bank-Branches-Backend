@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'uvm@y+88#8+9%r8a$6&ubff-w6dcrr%r#b@7j(1ep$vpte+0c&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['sanskar-fyle-coding-challenge.herokuapp.com', '127.0.0.1']
 # ALLOWED_HOSTS = []
